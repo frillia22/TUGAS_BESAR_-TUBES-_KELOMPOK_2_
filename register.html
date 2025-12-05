@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Mercure - Registration</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+            width: 350px;
+            margin: auto;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Pendaftaran Peserta</h1>
+
+    <form onsubmit="return submitForm()">
+
+        <label>Nama Lengkap:</label>
+        <input type="text" id="nama" required>
+
+        <label>Email:</label>
+        <input type="email" id="email" required>
+
+        <label>Jenis Tiket:</label><br>
+        <input type="radio" name="tiket" value="VIP" required> VIP <br>
+        <input type="radio" name="tiket" value="Regular" required> Regular <br><br>
+
+        <button type="submit">Daftar</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            let nama = document.getElementById("nama").value;
+
+            alert("Terima kasih " + nama + ", tiket Anda akan dikirim ke email!");
+
+            return false; 
+        }
+    </script>
+
+</body>
+</html>
